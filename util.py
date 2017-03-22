@@ -9,6 +9,7 @@ import re
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 import sqlite3
+from playsound import playsound
 
 # STATIC_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/static/'
 # GAME_DB_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/games/game.db'
@@ -16,6 +17,7 @@ STATIC_PATH = 'C:/Users/bin3y/Documents/GitHub/werewolf_assist/static/'
 GAME_DB_PATH = 'C:/Users/bin3y/Documents/GitHub/werewolf_assist/games/game.db'
 
 
+# database related
 def gen_connection(file_path=None):
     """
     generate a connection object for different database types
@@ -92,3 +94,14 @@ def db_insert_df(db_session, table_name, input_df, schema=None):
         input_df.to_sql(table_name, db_session.bind, if_exists='append', index=False, schema=schema)
     db_session.commit()
     db_session.remove()
+
+
+# playing sounds
+def sound_play(sound_path):
+    """
+
+    :param sound_path:
+    usage:
+        sound_play('C:/Users/bin3y/Documents/GitHub/werewolf_assist/static/sound/getting_dark.m4a')
+    """
+    playsound(sound_path)
