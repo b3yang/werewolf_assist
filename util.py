@@ -10,8 +10,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 import sqlite3
 
-STATIC_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/static/'
-GAME_DB_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/games/game.db'
+# STATIC_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/static/'
+# GAME_DB_PATH = 'C:/Users/byang/Documents/bin/workspace/werewolf_assist/games/game.db'
+STATIC_PATH = 'C:/Users/bin3y/Documents/GitHub/werewolf_assist/static/'
+GAME_DB_PATH = 'C:/Users/bin3y/Documents/GitHub/werewolf_assist/games/game.db'
 
 
 def gen_connection(file_path=None):
@@ -74,6 +76,7 @@ def db_select(db_session, sql_str, return_df=True, pd_native=True):
             _result = _result.fetchall()
     db_session.remove()
     return _result
+
 
 def db_insert_df(db_session, table_name, input_df, schema=None):
     """
