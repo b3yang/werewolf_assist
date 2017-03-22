@@ -1,0 +1,16 @@
+config_type,n_player,role,n_player_in_role
+standard1,9,warewolves,3
+standard1,9,seer,1
+standard1,9,witch,1
+standard1,9,townsfolk,3
+standard1,9,hunter,1
+standard2,9,warewolves,3
+standard2,9,seer,1
+standard2,9,witch,1
+standard2,9,townsfolk,3
+standard2,9,idiot,1
+standard1,10,warewolves,3
+standard1,10,seer,1
+standard1,10,witch,1
+standard1,10,townsfolk,4
+standard1,10,ancient,1
